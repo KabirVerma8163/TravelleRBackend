@@ -32,5 +32,5 @@ func main() {
 		fmt.Println("Hello, world!")
 		// format string
     log.Println(fmt.Sprintf("Server started on localhost:%v", port))
-		log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), router))
+		log.Fatal(http.ListenAndServe(fmt.Sprintf("0.0.0.0:%v", port), router))
 }
