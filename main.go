@@ -26,7 +26,7 @@ func main() {
     // Register the handler function for the root URL
     router.HandleFunc("/", rootHandler).Methods("GET")
 
-		port := 28000
+		port := 8001
 
     // Start the server on localhost port 8080 and log any errors
 		fmt.Println("Hello, world!")
