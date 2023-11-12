@@ -5,6 +5,7 @@ import (
     "log"
     "net/http"
     "github.com/gorilla/mux"
+		"fmt"
 )
 
 // Message struct to send as JSON response
@@ -26,6 +27,7 @@ func main() {
     router.HandleFunc("/", rootHandler).Methods("GET")
 
     // Start the server on localhost port 8080 and log any errors
+		fmt.Println("Hello, world!")
     log.Println("API is running on http://localhost:8080")
     log.Fatal(http.ListenAndServe(":8080", router))
 }
