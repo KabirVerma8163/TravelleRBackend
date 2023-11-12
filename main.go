@@ -15,7 +15,7 @@ type Message struct {
 
 // handler function to respond to the root URL
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-    msg := Message{Text: "Hello, world!"}
+    msg := Message{Text: "Hello, world, UPDATED!!!!!"}
     json.NewEncoder(w).Encode(msg)
 }
 
