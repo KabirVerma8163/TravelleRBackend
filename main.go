@@ -26,8 +26,11 @@ func main() {
     // Register the handler function for the root URL
     router.HandleFunc("/", rootHandler).Methods("GET")
 
+		port := 28000
+
     // Start the server on localhost port 8080 and log any errors
 		fmt.Println("Hello, world!")
-    log.Println("API is running on http://localhost:3000")
-    log.Fatal(http.ListenAndServe(":3000", router))
+		// format string
+    log.Println(fmt.Sprintf("Server started on localhost:%v", port))
+		log.Fatal(http.ListenAndServe(fmt.Sprintf(":%v", port), router))
 }
