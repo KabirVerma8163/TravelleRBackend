@@ -28,6 +28,6 @@ func main() {
 
     // Start the server on localhost port 8080 and log any errors
 		fmt.Println("Hello, world!")
-    log.Println("API is running on http://localhost:8080")
-    log.Fatal(http.ListenAndServe(":8080", router))
+    log.Println("API is running on http://localhost:3000")
+    log.Fatal(http.ListenAndServe(":3000", router))
 }
