@@ -29,6 +29,11 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
   json.NewEncoder(w).Encode(msg)
 }
 
+func test2Handler(w http.ResponseWriter, r *http.Request) {
+  msg := Message{Text: "MEOWWWW"}
+  json.NewEncoder(w).Encode(msg)
+}
+
 
 func main() {
     // Create a new router
@@ -37,6 +42,7 @@ func main() {
     // Register the handler function for the root URL
     router.HandleFunc("/", rootHandler).Methods("GET")
     router.HandleFunc("/test", testHandler).Methods("GET")
+    router.HandleFunc("/MEOW", test2Handler).Methods("GET")
 
 		port := 8001
     machineName := "high-fructose-corn-syrup"
