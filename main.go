@@ -38,11 +38,12 @@ func main() {
     router.HandleFunc("/", rootHandler).Methods("GET")
     router.HandleFunc("/test", testHandler).Methods("GET")
 
-		port := 3001
+		port := 8001
+    machineName := "high-fructose-corn-syrup"
 
     // Start the server on localhost port 8080 and log any errors
 		fmt.Println("Hello, world!")
 		// format string
     log.Println(fmt.Sprintf("Server started on localhost:%v", port))
-		log.Fatal(http.ListenAndServe(fmt.Sprintf("0.0.0.0:%v", port), router))
+		log.Fatal(http.ListenAndServe(fmt.Sprintf("%s:%v", machineName, port), router))
 }
